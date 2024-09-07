@@ -4,6 +4,7 @@ import resolve from '@rollup/plugin-node-resolve'
 import terser from '@rollup/plugin-terser'
 import { defineConfig } from 'rollup'
 import dts from 'rollup-plugin-dts'
+import { importExportPlugin } from 'rollup-plugin-import-export'
 import globals from 'rollup-plugin-node-globals'
 import ts from 'rollup-plugin-typescript2'
 
@@ -24,6 +25,7 @@ const config = defineConfig([
       },
     ],
     plugins: [
+      importExportPlugin(),
       ts(),
       babelPlugin({ exclude: '**/node_modules/**' }),
       commonjs(),
@@ -40,6 +42,7 @@ const config = defineConfig([
       },
     ],
     plugins: [
+      importExportPlugin(),
       ts(),
       babelPlugin({ exclude: '**/node_modules/**' }),
       commonjs(),
@@ -57,6 +60,7 @@ const config = defineConfig([
       preserveModules: true,
     },
     plugins: [
+      importExportPlugin(),
       dts(),
     ],
   },
