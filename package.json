@@ -3,8 +3,8 @@
   "type": "module",
   "version": "1.0.0",
   "description": "个人工具函数库",
-  "author": "",
-  "license": "ISC",
+  "author": "afe1 2279948211@qq.com",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/pzzyf/afe1-utils"
@@ -25,6 +25,7 @@
     "dist"
   ],
   "scripts": {
+    "test": "vitest",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "dev": "rollup -c --watch",
@@ -43,6 +44,7 @@
     "rollup-plugin-dts": "^6.1.1",
     "rollup-plugin-node-globals": "^1.4.0",
     "rollup-plugin-typescript2": "^0.36.0",
-    "typescript": "^5.5.4"
+    "typescript": "^5.5.4",
+    "vitest": "^2.0.5"
   }
 }
