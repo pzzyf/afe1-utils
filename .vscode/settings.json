@@ -83,5 +83,11 @@
     "scss",
     "pcss",
     "postcss"
-  ]
+  ],
+  "docwriter.language": "English",
+  "docwriter.progress.trackFunctions": true,
+  "docwriter.progress.trackMethods": true,
+  "docwriter.progress.trackClasses": true,
+  "docwriter.progress.trackTypes": true,
+  "docwriter.style": "JSDoc"
 }

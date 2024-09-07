@@ -29,10 +29,18 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "dev": "rollup -c --watch",
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "doc": "api-extractor run --local --verbose && api-documenter markdown -i temp -o doc",
+    "doc:debug": "api-extractor run --local --verbose --diagnostics && api-documenter markdown -i temp -o doc",
+    "trace": "tsc dist/types/index.d.ts --traceResolution > trace.log",
+    "docs:dev": "vitepress dev",
+    "docs:build": "vitepress build",
+    "docs:preview": "vitepress preview"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^3.3.2",
+    "@microsoft/api-documenter": "^7.25.12",
+    "@microsoft/api-extractor": "^7.47.7",
     "@rollup/plugin-babel": "^6.0.4",
     "@rollup/plugin-commonjs": "^26.0.1",
     "@rollup/plugin-node-resolve": "^15.2.3",
@@ -40,12 +48,22 @@
     "@types/node": "^22.5.4",
     "babel": "^6.23.0",
     "eslint": "^9.10.0",
+    "fast-glob": "^3.3.2",
     "rollup": "^4.21.2",
     "rollup-plugin-dts": "^6.1.1",
     "rollup-plugin-import-export": "^0.0.1",
     "rollup-plugin-node-globals": "^1.4.0",
     "rollup-plugin-typescript2": "^0.36.0",
     "typescript": "^5.5.4",
+    "vitepress": "^1.3.4",
     "vitest": "^2.0.5"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "@algolia/client-search",
+        "search-insights"
+      ]
+    }
   }
 }
