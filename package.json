@@ -1,7 +1,7 @@
 {
   "name": "@afe1/utils",
   "type": "module",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "个人工具函数库",
   "author": "afe1 2279948211@qq.com",
   "license": "MIT",
