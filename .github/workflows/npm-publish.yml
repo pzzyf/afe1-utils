@@ -3,25 +3,37 @@ name: 发布 NPM 包
 on:
   push:
     branches:
-      - main  # 或者你的主分支名称
+      - main
+  workflow_dispatch:
 
 jobs:
   publish-npm:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8  # 使用您项目中使用的 pnpm 版本
+
       - uses: actions/setup-node@v3
         with:
           node-version: '18'
           registry-url: 'https://registry.npmjs.org'
-      - run: npm ci
-      - run: npm run build
+          cache: 'pnpm'
+
+      - name: 安装依赖
+        run: pnpm install --frozen-lockfile
+
+      - name: 构建项目
+        run: pnpm run build
+
       - name: 检查版本并发布
         run: |
           PACKAGE_VERSION=$(node -p "require('./package.json').version")
-          PUBLISHED_VERSION=$(npm view @afe1/utils version)
+          PUBLISHED_VERSION=$(pnpm view @afe1/utils version)
           if [ "$PACKAGE_VERSION" != "$PUBLISHED_VERSION" ]; then
-            npm publish
+            pnpm publish
             echo "新版本 $PACKAGE_VERSION 已发布"
           else
             echo "当前版本 $PACKAGE_VERSION 已经是最新的，无需发布"
