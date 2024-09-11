@@ -50,10 +50,10 @@ jobs:
       - name: Install pnpm
         uses: pnpm/action-setup@v4
 
-      - name: Set node ${{ matrix.node }}
+      - name: Set node 18
         uses: actions/setup-node@v4
         with:
-          node-version: ${{ matrix.node }}
+          node-version: 18
 
       - name: Setup
         run: npm i -g @antfu/ni
