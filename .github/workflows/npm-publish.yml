@@ -31,9 +31,9 @@ jobs:
       - name: 检查版本并发布
         run: |
           PACKAGE_VERSION=$(node -p "require('./package.json').version")
-          PUBLISHED_VERSION=$(pnpm view @afe1/utils version)
+          PUBLISHED_VERSION=$(pnpm view @afe1/utils version || echo "0.0.0")
           if [ "$PACKAGE_VERSION" != "$PUBLISHED_VERSION" ]; then
-            pnpm config set //registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}
+            pnpm config set //registry.npmjs.org/:_authToken=${NODE_AUTH_TOKEN}
             pnpm publish --no-git-checks --access public
             echo "新版本 $PACKAGE_VERSION 已发布"
           else
