@@ -1,7 +1,7 @@
 {
   "name": "@afe1/utils",
   "type": "module",
-  "version": "1.0.7",
+  "version": "1.0.9",
   "description": "个人工具函数库",
   "author": "afe1 2279948211@qq.com",
   "license": "MIT",
@@ -13,7 +13,7 @@
   "sideEffects": false,
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
+      "types": "./dist/types/index.d.ts",
       "import": "./dist/esm/index.js",
       "require": "./dist/cjs/index.js"
     }
