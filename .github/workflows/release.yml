@@ -23,9 +23,9 @@ jobs:
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
-      - run: npm run install
+      - run: npm install
 
-      - run: npm run build
+      - run: npm build
 
       - run: npm publish
         env:
