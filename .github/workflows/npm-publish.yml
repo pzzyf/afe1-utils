@@ -1,5 +1,5 @@
 # action名称
-name: Publish and Release
+name: Publish
 
 # 当代码合并到main分支的时候，执行下列脚本
 on:
@@ -22,6 +22,9 @@ jobs:
       - name: 安装依赖
         run: npm install
 
+      - name: 构建packages
+        run: npm run build
+
       - name: 发布NPM包
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
@@ -36,15 +39,4 @@ jobs:
         with:
           path: ./package.json
           property: version
-
-      - name: 创建GitHub Release
-        id: create_release
-        uses: actions/create-release@latest
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: v${{steps.version.outputs.value}}
-          release_name: v${{steps.version.outputs.value}}
-          draft: false
-          prerelease: false
 
