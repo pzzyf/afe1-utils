@@ -7,7 +7,7 @@
 **Signature:**
 
 ```typescript
-declare function is_number(n: any): n is number;
+declare function is_number(n: any): n is number
 ```
 
 ## Parameters
@@ -16,34 +16,27 @@ declare function is_number(n: any): n is number;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 n
 
-
 </td><td>
 
 any
 
-
 </td><td>
-
 
 </td></tr>
 </tbody></table>
 **Returns:**
 
 n is number
-

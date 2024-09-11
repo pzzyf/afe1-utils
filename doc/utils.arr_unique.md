@@ -9,7 +9,7 @@ The function `arr_unique` removes duplicate elements from an array in TypeScript
 **Signature:**
 
 ```typescript
-declare function arr_unique<T>(arr: T[]): T[];
+declare function arr_unique<T>(arr: T[]): T[]
 ```
 
 ## Parameters
@@ -18,32 +18,26 @@ declare function arr_unique<T>(arr: T[]): T[];
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 arr
 
-
 </td><td>
 
 T\[\]
 
-
 </td><td>
 
 The `arr` parameter is an array of elements of type `T`<!-- -->.
-
 
 </td></tr>
 </tbody></table>
@@ -52,4 +46,3 @@ The `arr` parameter is an array of elements of type `T`<!-- -->.
 T\[\]
 
 The function `arr_unique` returns an array with all duplicate elements removed from the input array `arr`<!-- -->.
-

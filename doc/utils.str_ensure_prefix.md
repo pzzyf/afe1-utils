@@ -7,7 +7,7 @@
 **Signature:**
 
 ```typescript
-declare function str_ensure_prefix(s: string, prefix: string): string;
+declare function str_ensure_prefix(s: string, prefix: string): string
 ```
 
 ## Parameters
@@ -16,48 +16,38 @@ declare function str_ensure_prefix(s: string, prefix: string): string;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 s
 
-
 </td><td>
 
 string
 
-
 </td><td>
-
 
 </td></tr>
 <tr><td>
 
 prefix
 
-
 </td><td>
 
 string
 
-
 </td><td>
-
 
 </td></tr>
 </tbody></table>
 **Returns:**
 
 string
-

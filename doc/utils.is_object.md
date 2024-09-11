@@ -7,7 +7,7 @@
 **Signature:**
 
 ```typescript
-declare function is_object(o: any): o is Exclude<object, Array<any>>;
+declare function is_object(o: any): o is Exclude<object, Array<any>>
 ```
 
 ## Parameters
@@ -16,34 +16,27 @@ declare function is_object(o: any): o is Exclude<object, Array<any>>;
 
 Parameter
 
-
 </th><th>
 
 Type
 
-
 </th><th>
 
 Description
-
 
 </th></tr></thead>
 <tbody><tr><td>
 
 o
 
-
 </td><td>
 
 any
 
-
 </td><td>
-
 
 </td></tr>
 </tbody></table>
 **Returns:**
 
 o is Exclude&lt;object, Array&lt;any&gt;&gt;
-
